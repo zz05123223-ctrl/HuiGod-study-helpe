@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>学习通自用助手</title><link rel="stylesheet" href="ui.css"></head>
+<body class="popup"><main>
+<span class="tag">个人本地扩展 · 0.2.0</span>
+<header class="popup-header"><span class="app-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Z"/><path d="M12 5v15"/></svg></span><div><h1>学习通自用助手</h1><p>视频连播 · 章节切换 · AI 答题</p></div></header>
+<p class="notice"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 10 18H2L12 3Z"/><path d="M12 9v5m0 3h.01"/></svg>第三方辅助工具，可能影响课程记录或成绩。请先核对一节课程的实际效果。</p>
+<section class="card" id="runCard" data-state="stopped"><div class="run-top"><h2 class="status-pill"><span class="status-dot"></span><span id="phase">读取状态</span></h2><span class="usage-pill"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></svg><span id="calls">AI <strong>0</strong> / 1000</span></span></div>
+<p id="note">准备就绪后，可在课程页面启动。</p>
+<div class="run-actions"><button class="primary" id="start"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7V5Z"/></svg>启动当前课程</button><button class="stop" id="stop"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="3"/></svg>停止</button></div>
+<div class="portal-grid"><button class="portal" id="bank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 10 5-10 5L2 8l10-5Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></svg>题库管理</button><button class="portal ai" id="options"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Zm7 13 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/></svg>AI 设置</button></div><p id="message" role="status"></p></section>
+<details class="card logs-card"><summary><span class="icon mint"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="4"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>运行记录<span id="logCount">暂无记录</span><svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></summary><div id="logs" class="log-list"><p class="empty">暂无记录</p></div></details>
+<footer>仅在当前启动的课程标签运行 · 1 倍速<br>验证码、身份核验与未适配任务需要人工处理。</footer>
+</main><script src="popup.js"></script></body></html>

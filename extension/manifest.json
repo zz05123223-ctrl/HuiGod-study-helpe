@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "学习通自用助手",
+  "version": "0.2.0",
+  "description": "课程视频连播、章节切换和题库/AI选择题作答。须手动启动，不保证免封禁或答案正确。",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*.chaoxing.com/*"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "学习通自用助手"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.chaoxing.com/*"
+      ],
+      "js": [
+        "vendor/html2canvas.min.js",
+        "core.js",
+        "content.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}
